@@ -1,0 +1,23 @@
+{
+  "name": "Bucket_list",
+  "version": "1.0.0",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server:dev": "nodemon server/server.js",
+    "build": "webpack -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.32.1",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "express": "^4.17.0",
+    "mongodb": "^3.2.5",
+    "nodemon": "^1.19.0"
+  },
+  "description": ""
+}
