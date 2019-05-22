@@ -18,6 +18,7 @@ CompletedListView.prototype.render = function (listItems) {
 }
 
 CompletedListView.prototype.renderIndividual = function (listItem) {
+  console.log(listItem);
   const listItemContainer = document.createElement('div')
   listItemContainer.id = 'wish-list'
 
@@ -26,6 +27,21 @@ CompletedListView.prototype.renderIndividual = function (listItem) {
   listItemContainer.appendChild(wish)
 
   this.container.appendChild(listItemContainer)
+
+  const button = document.createElement('button')
+  button.classList.add('delete-btn')
+  button.value = listItem._id
+
+  button.addEventListener('click', (evt) =>{
+    // console.log("completedlistView", evt);
+    PubSub.publish('CompletedListView:listItem-delete-clicked', evt.target.value)
+  })
+
+  this.container.appendChild(button)
 };
+
+
+
+
 
  module.exports = CompletedListView;

@@ -1,0 +1,37 @@
+#wish-list {
+
+  border-radius: 5px;
+  border: solid blue 5px;
+  margin: 20px
+}
+
+head {
+  center
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#bucket-list-container{
+  display: grid;
+  grid-template-columns: 50% 50%
+}
+
+#bucket-list-input{
+
+    font-size: 20px;
+}
+
+.delete-btn{
+  width: 20px;
+  height: 20px;
+  background: url(./delete.png);
+  background-size: 20px;
+}
+
+button.delete-btn {
+  border: none;
+  padding: 0;
+}
